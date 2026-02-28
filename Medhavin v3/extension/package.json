@@ -1,0 +1,44 @@
+{
+  "name": "medhavin-ai",
+  "displayName": "Medhavin AI",
+  "publisher": "medhavin",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onView:medhavinSidebar"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "medhavinContainer",
+          "title": "Medhavin AI",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "medhavinContainer": [
+        {
+          "id": "medhavinSidebar",
+          "type": "webview",
+          "name": "Medhavin AI"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "npx webpack --config webpack.config.js",
+    "watch": "npx webpack --watch --config webpack.config.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "ts-loader": "^9.4.0",
+    "typescript": "^5.0.0",
+    "webpack": "5.88.2",
+    "webpack-cli": "5.1.4"
+  }
+}

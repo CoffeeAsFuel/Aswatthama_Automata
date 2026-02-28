@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Ecommerce</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products..." id="search-input">
+            <button>Search</button>
+        </div>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+        </div>
+        <button class="toggle-button">Toggle Theme</button>
+    </nav>
+    <section class="filter-sidebar">
+        <h2>Filter by Category</h2>
+        <ul>
+            <li><input type="checkbox" id="electronics" value="Electronics"><label for="electronics">Electronics</label></li>
+            <li><input type="checkbox" id="fashion" value="Fashion"><label for="fashion">Fashion</label></li>
+            <li><input type="checkbox" id="home" value="Home"><label for="home">Home</label></li>
+        </ul>
+        <h2>Filter by Price</h2>
+        <div class="price-range-slider">
+            <input type="range" id="price-min" min="0" max="100" value="0">
+            <input type="range" id="price-max" min="0" max="100" value="100">
+            <span id="price-min-value">0</span> - <span id="price-max-value">100</span>
+        </div>
+    </section>
+    <section class="products-grid" id="products-grid">
+        <!-- Products will be rendered here -->
+    </section>
+    <section class="sorting-section">
+        <label for="sorting-dropdown">Sort by:</label>
+        <select id="sorting-dropdown">
+            <option value="price-asc">Price (Low to High)</option>
+            <option value="price-desc">Price (High to Low)</option>
+            <option value="rating-asc">Rating (Low to High)</option>
+            <option value="rating-desc">Rating (High to Low)</option>
+        </select>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
